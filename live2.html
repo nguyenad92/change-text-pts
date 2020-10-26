@@ -1,0 +1,273 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="robots" content="noindex,nofollow">
+    <title>Grace Alliance Church</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        /* resets and general styles */
+
+        * {
+            margin: 0 auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        ::-moz-selection {
+            color: #FFFFFF;
+            background: #FF5722;
+        }
+
+        ::selection {
+            color: #FFFFFF;
+            background: #FF5722;
+        }
+
+        body {
+            font: normal 16px 'Roboto', sans-serif;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        div.wrapper {
+            width: calc(4*225px);
+            margin: 0 auto;
+        }
+
+        span, a, strong {
+            font-weight: 700;
+        }
+
+        a {
+            transition: .2s;
+            text-decoration: none;
+            color: #787878;
+            border-bottom: 1px solid #607D8B;
+        }
+
+            a:hover {
+                transition: .2s;
+                color: #FF5722;
+            }
+
+        /* page layout */
+
+        /* header */
+
+        header {
+            width: 100%;
+            height: 50%;
+            background: #607D8B;
+        }
+
+        /* section */
+
+        section {
+            width: 100%;
+            height: 50%;
+        }
+
+            section [header], section p.meta {
+                color: #FFFFFF;
+                margin-bottom: 15px;
+            }
+
+            section hgroup {
+                margin-top: -360px;
+            }
+
+            section p.numbers {
+                font-size: 6em;
+            }
+
+            section p.meta, section p.strings {
+                font-size: 1.5em;
+            }
+
+            section [header] {
+                font-size: 4.5em;
+                padding-top: 100px
+            }
+
+        /* countdown styles */
+
+        div#countdown {
+            color: #353535;
+        }
+
+            div#countdown p {
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+            }
+
+        p.numbers {
+            width: 100%;
+            height: 85%;
+            background: #FFFFFF;
+            margin-top: -25px;
+            padding-top: 100px;
+        }
+
+        p.strings {
+            width: 100%;
+            height: auto;
+            padding: 30px 0;
+            background: #FF5722;
+            color: #FFFFFF;
+        }
+
+        div.cd-box {
+            width: 210px;
+            height: 360px;
+            background: #FFFFFF;
+            float: left;
+            padding: 25px 0 0 0;
+            margin: 30px 15px 0 0;
+            -webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+            -moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+            box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+        }
+
+        /* footer */
+        /* footer */
+        footer {
+            position: relative;
+            top: 60px;
+            font-size: 1.5rem;
+        }
+
+        footer p {
+            color: #787878;
+        }
+
+        .servicetime {
+            font-size: 1.5rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+
+    <header>
+    </header>
+    <section>
+        <div class="wrapper">
+
+            <hgroup>
+                <div header>Hội Thánh Tin Lành Ân Điển </div>
+                <p class="meta servicetime">Lễ Thờ Phượng Live Stream Lúc 11:15 AM</p>
+            </hgroup>
+
+            <div id="countdown">
+                <div class="cd-box">
+                    <p id="days" class="numbers days">00</p><br>
+                    <p class="strings timeRefDays">Days</p>
+                </div>
+                <div class="cd-box">
+                    <p id="hours" class="numbers hours">00</p><br>
+                    <p class="strings timeRefHours">Hours</p>
+                </div>
+                <div class="cd-box">
+                    <p id="minutes" class="numbers minutes">00</p><br>
+                    <p class="strings timeRefMinutes">Minutes</p>
+                </div>
+                <div class="cd-box">
+                    <p id="seconds" class="numbers seconds">00</p><br>
+                    <p class="strings timeRefSeconds">Seconds</p>
+                </div>
+            </div>
+            <!-- end div#countdown -->
+
+            <footer>
+                <div style="font-weight:bold">Youtube Channel</div>
+                <div>
+                    <a href="https://www.youtube.com/c/gracealliancechurch">youtube.com/c/gracealliancechurch</a>
+                </div>
+                <br />
+                <div style="font-weight:bold">Website</div>
+                <div>
+                    <a href="https://gracealliancechurch.org/">GraceAllianceChurch.org</a>
+                </div>
+                <br />
+                <div style="font-weight:bold">Location</div>
+                <div>555 Los Coches St, Milpitas, CA 95035</div>
+                <div>408-520-0255</div>
+                <br />
+                <div style="font-weight:bold">Regular Service Times</div>
+                <div>Sunday English Service 9:45 AM</div>
+                <div>Sunday Vietnamese Service 11:15 AM</div>
+                <br /><br />
+            </footer>
+
+
+
+        </div>
+        <!-- end div.wrapper -->
+    </section>
+
+
+    <script>
+        /*source: https://bashooka.com/coding/40-css-javascript-animated-countdown-timer-examples/ */
+
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        function format(date) {
+            var d = date.getDate();
+            var m = date.getMonth() + 1;
+            var y = date.getFullYear();
+            return '' + (m <= 9 ? '0' + m : m) + '/' + (d <= 9 ? '0' + d : d) + '/' + y ;
+        }
+        function GetNextDayOfTheWeek(Day) {
+            var d = new Date();
+            d.setDate(d.getDate() + (Day + 7 - d.getDay()) % 7);
+            return d;
+        }
+        var DayOfTheWeek = 0; //SunDay
+        var ServiceTime = "11:14:00"; //2nd service time
+        var now = new Date();
+
+        if ((new Date).getDay() == DayOfTheWeek) { //Today == Sunday
+            CountDownToThisDay = format(new Date()) +" " + ServiceTime;
+        }
+        else {
+            CountDownToThisDay = format(GetNextDayOfTheWeek(DayOfTheWeek))+" " + ServiceTime;
+        }
+        console.log(CountDownToThisDay);
+        let countDown = new Date(CountDownToThisDay).getTime(),
+            x = setInterval(function () {
+
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+
+                  
+
+                //do something later when date is reached
+                if (distance <= 0) {
+                    clearInterval(x);
+                    window.location.href = "http://162.253.153.197/home/live2";
+
+                }
+                else {
+                    document.getElementById('days').innerText = Math.floor(distance / (day)),
+                    document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+                }
+
+            }, second)
+    </script>
+
+</body>
+</html>
